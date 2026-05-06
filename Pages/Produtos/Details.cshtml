@@ -1,0 +1,36 @@
+﻿@page
+@model PapelariaLealApp.Pages.Produtos.DetailsModel
+
+<h2 class="text-center my-4">Detalhes do Produto</h2>
+
+@if (Model.Produto != null)
+{
+    <div class="d-flex justify-content-center">
+        <div class="card shadow-sm" style="max-width: 600px; width: 100%;">
+
+            <img src="@Model.Produto.ImagemUrl"
+                 class="card-img-top p-3"
+                 style="max-height: 300px; object-fit: contain;"
+                 alt="@Model.Produto.Nome" />
+
+            <div class="card-body text-center">
+
+                <h4 class="card-title">@Model.Produto.Nome</h4>
+
+                <p class="card-text fs-5">
+                    <strong>Preço:</strong> R$ @Model.Produto.Preco
+                </p>
+
+                <a href="/Produtos"
+                   class="btn btn-secondary mt-2">
+                    Voltar
+                </a>
+
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <p class="text-center">Produto não encontrado.</p>
+}
