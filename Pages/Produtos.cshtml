@@ -3,11 +3,12 @@
 <div class="row">
 @foreach (var item in Model.Produtos)
 {
-    <div class="col-md-4 mb-3">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
         <div class="card shadow-sm">
 
             <img src="@item.ImagemUrl"
                  class="card-img-top"
+                 style="height: 180px; object-fit: contain;"
                  alt="@item.Nome" />
 
             <div class="card-body text-center">

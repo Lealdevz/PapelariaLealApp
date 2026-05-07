@@ -6,11 +6,11 @@ namespace PapelariaLealApp.Pages.Produtos
 {
     public class DetailsModel : PageModel
     {
-        private readonly ProdutoService _service;
+        private readonly IProdutoService _service;
 
         public Produto Produto { get; set; }
 
-        public DetailsModel(ProdutoService service)
+        public DetailsModel(IProdutoService service)
         {
             _service = service;
         }
